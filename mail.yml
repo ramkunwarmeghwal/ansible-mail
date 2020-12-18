@@ -1,0 +1,13 @@
+- hosts: 127.0.0.1
+  vars_files:
+  - mys.yml
+  tasks:
+  - name: Sending an e-mail using Gmail SMTP servers
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: "{{ u  }}"
+      password: "{{ p  }}"
+      to: ramkunwarboo@gmail.com
+      subject: Ansibl-report
+      body: from ansible testing...
